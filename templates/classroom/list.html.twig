@@ -1,0 +1,17 @@
+<h1> List classroom</h1>
+<table border="1">
+    <tr><th>Ref</th>
+    <th>Name</th>
+    <th>Update</th>
+    <th>Delete</th>
+    </tr>
+    {% for classroom in list %}
+        <tr>
+            <td>{{ classroom.Id }}</td>
+            <td>{{ classroom.Name }}</td>
+            <td><a href="{{ path('editClassroom',{'id':classroom.id}) }}">Update</a> </td>
+            <td><a href="{{ path('deleteClassroom',{'id':classroom.id}) }}">Delete</a> </td>
+
+        </tr>
+    {% endfor %}
+</table>
